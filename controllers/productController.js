@@ -52,7 +52,7 @@ export const createProductController = async (req, res) => {
       products,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       error,
@@ -77,7 +77,7 @@ export const getProductController = async (req, res) => {
       products,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Erorr in getting products",
@@ -98,7 +98,7 @@ export const getSingleProductController = async (req, res) => {
       product,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Eror while getitng single product",
@@ -116,7 +116,7 @@ export const productPhotoController = async (req, res) => {
       return res.status(200).send(product.photo.data);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Erorr while getting photo",
@@ -134,7 +134,7 @@ export const deleteProductController = async (req, res) => {
       message: "Product Deleted successfully",
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Error while deleting product",
@@ -183,7 +183,7 @@ export const updateProductController = async (req, res) => {
       products,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       error,
@@ -205,7 +205,7 @@ export const productFiltersController = async (req, res) => {
       products,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).send({
       success: false,
       message: "Error While Filtering Products",
@@ -223,7 +223,7 @@ export const productCountController = async (req, res) => {
       total,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).send({
       message: "Error in product count",
       error,
@@ -248,7 +248,7 @@ export const productListController = async (req, res) => {
       products,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).send({
       success: false,
       message: "error in per page ctrl",
@@ -272,7 +272,7 @@ export const searchProductController = async (req, res) => {
       .select("-photo");
     res.json(resutls);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).send({
       success: false,
       message: "Error In Search Product API",
@@ -295,7 +295,7 @@ export const realtedProductController = async (req,res) => {
     });
     
   } catch (error) {
-     console.log(error);
+    //  console.log(error);
      res.status(400).send({
       success:false,
       message: "Error while getting related products",
@@ -317,7 +317,7 @@ export const productCategoryController = async(req,res) => {
       products,
     })
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).send({
       success:false,
       error,
@@ -338,7 +338,7 @@ export const braintreeTokenController = async (req, res) => {
       }
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -372,6 +372,6 @@ export const brainTreePaymentController = async (req, res) => {
       }
     );
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };

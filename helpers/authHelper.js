@@ -8,7 +8,7 @@ export const hashPassword = async(password) =>{
         return hashedPassword
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
 
